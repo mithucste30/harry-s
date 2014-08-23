@@ -21,4 +21,5 @@
 nbproject/*
 public/assets/*
 public/uploads/*
+.rvmrc
 

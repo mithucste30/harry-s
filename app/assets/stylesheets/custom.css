@@ -1,0 +1,17 @@
+.no_padding_left{
+    padding-left: 0px;
+}
+
+.no_padding_right{
+    padding-right: 0px;
+}
+
+.back-image{
+    position: relative;
+    z-index: 1;
+}
+
+.top-image{
+    position: relative;
+    z-index: 3
+}
