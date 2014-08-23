@@ -17,4 +17,8 @@
 
 .DS_Store
 
-.elasticbeanstalk
+.elasticbeanstalki
+nbproject/*
+public/assets/*
+public/uploads/*
+
