@@ -18,18 +18,18 @@ set :format, :pretty
 set :log_level, :debug
 set :pty, true
 set :linked_files, %w{config/database.yml}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/assets}
 
 set :deploy_via, :remote_cache
 
 set :keep_releases, 5
 
+after 'deploy:publishing', 'deploy:restart'
+
 namespace :deploy do
   desc 'Restart application'
   task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      execute :touch, release_path.join('tmp/restart.txt')
-    end
+    invoke 'unicorn:restart'
   end
 
   before 'assets:precompile', 'cleanup_assets'
