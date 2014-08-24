@@ -24,8 +24,6 @@ set :deploy_via, :remote_cache
 
 set :keep_releases, 5
 
-after 'deploy:publishing', 'deploy:restart'
-
 namespace :deploy do
   desc 'Restart application'
   task :restart do
