@@ -18,7 +18,7 @@ set :format, :pretty
 set :log_level, :debug
 set :pty, true
 set :linked_files, %w{config/database.yml}
-set :linked_dirs, %w{bin log tmp tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/assets}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/assets}
 
 set :unicorn_config_path, "config/unicorn.rb"
 
@@ -40,7 +40,7 @@ namespace :deploy do
     end
   end
 
-  #before 'assets:precompile', 'cleanup_assets'
+  #before 'assets:precompile', 'clear_cache'
   after 'assets:precompile', :clean_expired_assets
 
   after :publishing, :restart
