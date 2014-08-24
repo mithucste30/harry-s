@@ -40,13 +40,27 @@ form{
     margin: 0 auto;
 }
 
-.hero{
+.refer.hero{
     width: 100%;
     height: 446px;
     background-image: url("/assets/home/transparent-black.png"), url("/assets/home/primary-backg-full.png");
     background-repeat: no-repeat, no-repeat;
     background-size: 55% 446px, 100% 446px;
     background-position: center center, center;
+    overflow: hidden;
+    position: relative;
+    letter-spacing: .09em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero{
+    width: 100%;
+    height: 446px;
+    background-image: url("/assets/home/primary-backg-full.png");
+    background-repeat: no-repeat;
+    background-size: 100% 446px;
+    background-position: center;
     overflow: hidden;
     position: relative;
     letter-spacing: .09em;

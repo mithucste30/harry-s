@@ -18,7 +18,7 @@ set :format, :pretty
 set :log_level, :debug
 set :pty, true
 set :linked_files, %w{config/database.yml}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/assets}
+set :linked_dirs, %w{bin log tmp tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/assets}
 
 set :unicorn_config_path, "config/unicorn.rb"
 
@@ -34,18 +34,14 @@ namespace :deploy do
 
   task :clean_expired_assets do
     on roles(:app), in: :sequence, wait: 1 do
-      within release_path do
-        as :deploy do
-          with rails_env: :production do
-            execute :rake, 'assets:clean_expired', "RAILS_ENV=production"
-          end
-        end
+      within release_path do                
+        execute :rake, "assets:clean_expired:all RAILS_ENV=#{fetch(:rails_env)} RAILS_GROUPS=assets"
       end
     end
   end
 
-  #  before 'assets:precompile', 'cleanup_assets'
-  #after 'assets:precompile', :clean_expired_assets
+  #before 'assets:precompile', 'cleanup_assets'
+  after 'assets:precompile', :clean_expired_assets
 
   after :publishing, :restart
 
