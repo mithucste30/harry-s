@@ -38,6 +38,8 @@ stdout_path "log/unicorn.stdout.log"
 # workers
 worker_processes 3
 
+pid 'tmp/pids/unicorn.pid'
+
 # use correct Gemfile on restarts
 before_exec do |server|
   ENV['BUNDLE_GEMFILE'] = "#{app_path}/current/Gemfile"
