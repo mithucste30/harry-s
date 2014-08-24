@@ -24,6 +24,10 @@ end
 
 group :development do
   gem 'pry'
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rvm'
 end
 
 gem 'delayed_job_active_record'

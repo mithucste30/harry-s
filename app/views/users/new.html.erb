@@ -1,12 +1,34 @@
-<div class="row">
-  <div class="col-md-12 no_padding_left no_padding_right">
-    <div class="header">
-      <%= image_tag "home/transparent-black.png" %>
-      <%= image_tag "home/primary-backg-full.png", :class => "img-responsive" %>
-    </div>
-    <div class="top-image">
-      
-    </div>
-  </div>
-
+<div class="hero"></div>
+<div>
+  <%= image_tag "home/uil-logo-middle.png", :style => "width: 100%;" %>
 </div>
+
+<div class="form-wrap clearfix text-center ">
+  <p>Ultra Inspired Living is Coming!</p>
+  <p>Making your Transition to a vibrantly healthy lifestyle easy.</p>
+
+  <p class="byline brandon">Be the first to know</p>
+
+  <%= image_tag "home/key-icon.png", :class => "key" %>
+
+  <%= form_for @user, :html => {:class => "form-inline"} do |f| %>
+    <%= f.email_field :email, {:class => "input-medium cfe"} %>
+    <%= image_submit_tag "home/step-inside-black.png", :class => "new_user_sumit_image"  %>
+  <% end %>
+</div>
+
+<%#*<div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">%>
+<%# if Rails.application.config.ended %>
+<%#*<p class="thanks brandon">THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>%>
+<%#*<p class="compiling brandon">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO</p>%>
+<%#*<p class="go-to brandon">In the meantime, head to  <a href="http://www.harrys.com/">WWW.HARRYS.COM</a></p>%>
+<%#*<p class="again brandon">Thank You Again!</p>%>
+<%# else %>
+<%#*<div class="key"></div>%>
+<%#*<p class="byline brandon">Be the first to know</p>%>
+<%#= form_for @user, :url => { :action => "create" } do |f| %>
+<%#= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
+<%#*<input class="submit brandon" name="commit" type="submit" value="Step Inside" />%>
+<%# end %>
+<%# end %>
+<%#*</div>%>
