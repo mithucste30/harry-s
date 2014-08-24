@@ -32,25 +32,22 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 
+  task :clean_expired_assets do
+    execute :rake, "assets:clean_expired"
+  end
+
   #  before 'assets:precompile', 'cleanup_assets'
-  after 'assets:precompile', 'assets:clean_expired_assets'
+  after 'assets:precompile', :clean_expired_assets
 
   after :publishing, :restart
 
   after :finishing, 'deploy:cleanup'
-
 
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       within release_path do
         execute :rake, 'tmp:cache:clear'
       end
-    end
-  end
-
-  namespace :assets do
-    task :clean_expired_assets do
-      execute :rake, "assets:clean_expired"
     end
   end
 end
