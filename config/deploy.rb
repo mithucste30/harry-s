@@ -6,8 +6,8 @@ set :scm, :git
 set :repo_url, 'git@github.com:mithucste30/harry-s.git'
 
 server '104.131.201.173',
-       :user => 'ubuntu',
-       :roles => %w{web app db}
+  :user => 'ubuntu',
+  :roles => %w{web app db}
 
 set :rvm_roles, [:app, :web]
 set :rvm_type, :user
@@ -20,6 +20,8 @@ set :pty, true
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/assets}
 
+set :unicorn_config_path, "#{current_path}/config/unicorn.rb"
+
 set :deploy_via, :remote_cache
 
 set :keep_releases, 5
@@ -30,8 +32,11 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 
-  before 'assets:precompile', 'cleanup_assets'
+  #  before 'assets:precompile', 'cleanup_assets'
+  after 'assets:precompile', 'assets:clean_expired_assets'
+
   after :publishing, :restart
+
   after :finishing, 'deploy:cleanup'
 
 
@@ -40,6 +45,12 @@ namespace :deploy do
       within release_path do
         execute :rake, 'tmp:cache:clear'
       end
+    end
+  end
+
+  namespace :assets do
+    task :clean_expired_assets do
+      execute :rake, "assets:clean_expired"
     end
   end
 end
