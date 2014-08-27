@@ -13,6 +13,71 @@
  *= require_self
 */
 
+@font-face {
+    font-family: 'StRyde-Thin';
+    src: url('fonts/StRyde-Thin/StRyde-Thin.eot');
+    src: url('fonts/StRyde-Thin/StRyde-Thin.eot?#iefix') format('embedded-opentype'),
+        url('fonts/StRyde-Thin/StRyde-Thin.woff') format('woff'),
+        url('fonts/StRyde-Thin/StRyde-Thin.ttf') format('truetype'),
+        url('fonts/StRyde-Thin/StRyde-Thin.svg#StRyde-Thin') format('svg');
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay-Italic';
+    src: url('fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic.otf')  format('opentype'),
+        url('fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic.woff') format('woff'), url('fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic.ttf')  format('truetype'),
+        url('fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic.svg#PlayfairDisplay-Italic') format('svg');
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.stryde-thin{
+    font-family: 'StRyde-Thin'
+}
+
+.play-fair {
+    font-family: PlayfairDisplay-Italic;
+    font-weight: 500;
+}
+
+.serif{
+    font-family: 'Serif'
+}
+
+.uil, .thanks-signup{
+    font-size: 27px;
+}
+
+.get-free-good{
+    margin-top: 40px;
+}
+
+.invite-friends{
+    margin-top: 10px;
+}
+
+.invite-via-social {
+    letter-spacing: 6px;
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+.invite-via-social p i{
+    font-size: 20px;
+}
+
+.invite-via-social p i + i{
+    margin-left: 5px;
+}
+
+
+.play-fair.step {
+    font-size: 13px;
+}
+
 
 form{
     margin-bottom: 0;
@@ -449,7 +514,7 @@ img.transparent-black {
     width: 100%;
     background: #FFF;
     border-top: 1px solid #D2D1C8;
-    padding-bottom: 100px;
+    padding-bottom: 40px;
 }
 
 #refer .prizes .page-content{
@@ -458,8 +523,7 @@ img.transparent-black {
 
 #refer .prizes .callout{
     text-align: center;
-    font-size: 16px;
-    color: #074E6F;
+    font-size: 22px;
     font-weight: bold;
     margin: 20px 0 0 0;
     letter-spacing: 2px;
@@ -506,29 +570,25 @@ img.transparent-black {
 
 #refer .prizes .products li.title{
     height: 100%;
-    text-transform: uppercase;
-    color: #074E6F;
+    text-transform: uppercase;    
     font-weight: 500;
     font-size: 14px;
     float: left;
-    margin-right: 68px;
-    width: 165px;
+    margin-right: 19px;
+    width: 203px;
     font-weight: bold;
 }
 
 #refer .prizes .products li.title .friends{
-    margin-top: 7px;
-    letter-spacing: 2px;
+    margin-top: 7px;    
 }
 
 #refer .prizes .products li.title .rewards{
-    margin-top: 45px;
-    letter-spacing: 2px;
+    margin-top: 45px;    
 }
 
 #refer .prizes .products li.product{
-    height: 100%;
-    color: #074E6F;
+    height: 100%;    
     width: 125px;
     margin-right: 129px;
     float: left;
@@ -541,8 +601,7 @@ img.transparent-black {
     border-radius: 15px;
     border: 1px solid #DAD9D2;
     text-align: center;
-    line-height: 30px;
-    color: #868282;
+    line-height: 30px;    
     overflow: hidden;
     background: #F1F0EE;
     font-weight: bold;
@@ -622,11 +681,11 @@ img.transparent-black {
 
 #refer .prizes p.place{
     text-align: center;
-    font-size: 16px;
-    color: #074E6F;
+    font-size: 16px;    
     width: 100%;
     font-weight: 500;
-    margin-top: 30px;
+    margin-top: 70px;
+    text-transform: uppercase;
 }
 
 #refer .prizes p.place span{
@@ -635,8 +694,7 @@ img.transparent-black {
 
 #refer .prizes p.check{
     text-align: center;
-    font-size: 16px;
-    color: #858181;
+    font-size: 14px;    
     width: 100%;
     font-weight: 500;
     margin-top: 5px;

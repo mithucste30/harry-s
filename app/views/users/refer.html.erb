@@ -1,20 +1,23 @@
 <div class="refer hero">
   <div class="refer-heading-texts">
-    <p class="brandon white">ULTRA INSPIRED LIIVING'S</p>
-    <p class="brandon white">THANK YOU FOR SIGNING UP</p>
+    <p class="white stryde-thin uil">ULTRA INSPIRED LIIVING'S</p>
+    <p class="white stryde-thin thanks-signup">THANK YOU FOR SIGNING UP</p>
+    <p class="white play-fair invite-friends">Invite Friends & Earn Product</p>
+    <div class="get-free-good">
+      <p class="white serif">Share your unique link via email, Facebook or Twitter and earn</p>
+      <p class="white serif">Ultra Inspired Livings good for each friend who signs up.</p>
+    </div>
+    <div class="copy-link serif"><%= root_url %>?ref=<%= @user.referral_code %></div>
+    <div class="invite-via-social ">
+      <p class="white stryde-thin invite-now">INVITE NOW
+        <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" target="_blank">
+          <i class="fa fa-facebook white"></i>
+        </a>
+        <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
+        <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank">
+          <i class="fa fa-twitter white"></i>
+        </a>
 
-    <p class="white">Invite Friends & Earn Product</p>
-
-    <p class="white">Share your unique link via email, Facebook or Twitter and earn</p>
-
-    <p class="white">Ultra Inspired Livings good for each friend who signs up.</p>
-
-    <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
-
-    <div>
-      <p class="white">INVITE NOW
-        <i class="fa fa-facebook white"></i>
-        <i class="fa fa-twitter white"></i>
         <i class="fa fa-envelope white"></i>
       </p>      
     </div>
@@ -39,17 +42,17 @@ stops.reverse_each { |stop|
 %>
 <div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
   <div class="page-content">
-    <p class="callout brandon">Here's How It Works:</p>
+    <p class="callout stryde-thin">Here's How It Works:</p>
     <ul class="products clearfix">
-      <li class="title brandon"><p class="friends">Friends Joined</p><p class="rewards">Harry's Product</p></li>
-      <% stops.each do |stop| %>
-        <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
-          <div class="circle"><%= stop["count"] %></div>
+      <li class="title stryde-thin"><p class="friends">Friends Joined</p><p class="rewards">ULTRA INSPIRED PRODUCT</p></li>
+      <% stops.each_with_index do |stop, index| %>
+        <li class="product stryde-thin <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
+          <div class="circle stryde-thin"><%= stop["count"] %></div>
           <div class="sep"></div>
-          <p><%= stop["html"].html_safe %></p>
+          <p class="play-fair step"><%= stop["html"].html_safe %></p>
 
           <div class="tooltip">
-            <img src="<%= stop["image"] %>" height="254">
+            <img alt=""  src="<%= stop["image"] %>" height="254"></img>
           </div>
         </li>
       <% end %>
@@ -72,13 +75,10 @@ stops.reverse_each { |stop|
   %>
 
     <% if referrals_count == 0 %>
-      <p class="place brandon"><span>No</span> friends have joined...Yet!</p>
+      <p class="place stryde-thin">No friends have joined Yet!</p>
     <% else %>
-      <p class="place brandon"><span><%= referrals_count %></span> <%= words %> joined</p>
+      <p class="place stryde-thin"><span><%= referrals_count %></span> <%= words %> joined</p>
     <% end %>
-    <p class="check brandon">Keep checking</p>
-
-    <p class="ship brandon">We ship to the U.S. (& Canada Soon)</p>
-    <a class="policy brandon" href="/privacy-policy" target="_blank">Privacy Policy</a>
+    <p class="check play-fair">Keep checking!</p>
   </div>
 </div>
