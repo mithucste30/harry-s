@@ -11,7 +11,7 @@ module ApplicationHelper
   end
 
   def tweet_url(opts)        
-    url = root_url + "&ref=#{opts[:ref]}"
+    url = root_url + "?ref=#{opts[:ref]}"
     url = short_url(url)    
     return url
   end
