@@ -1,3 +1,11 @@
+<% set_meta_tags :og => {
+  :title    => 'Check out Ultra Inspired!',
+  :type     => 'website',
+  :url      => "#{root_url}?ref=#{@user.referral_code}",
+  :image    =>  asset_url('refer/uil-logo-middle-square.png'),
+  :description => 'Ultra Inspired Living is a new community. You can come and join to win your own ultra inspired products too!'
+} %>
+
 <div class="refer hero">
   <div class="refer-heading-texts">
     <p class="white stryde-thin uil">ULTRA INSPIRED LIIVING'S</p>
@@ -10,15 +18,16 @@
     <div class="copy-link serif"><%= root_url %>?ref=<%= @user.referral_code %></div>
     <div class="invite-via-social ">
       <p class="white stryde-thin invite-now">INVITE NOW
-        <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" target="_blank">
+        <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Check+out+Ultra+Inspired!" target="_blank">
           <i class="fa fa-facebook white"></i>
         </a>
-        <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
+        <% twitter_message = "Check out #UltraInspired!. Ultra Inspired Living is a new community. You can come and join to win your own ultra inspired products too!" %>
         <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank">
           <i class="fa fa-twitter white"></i>
         </a>
-
-        <i class="fa fa-envelope white"></i>
+        <a href="mailto:?subject=Check+out+Ultra+Inspired!&body=Ultra+Inspired+Living+is+a+new+community.+You+can+come+and+join+to+win+your+own+ultra+inspired+products+too!+<%= "#{root_url}?ref=#{@user.referral_code}" %>">
+          <i class="fa fa-envelope white"></i>
+        </a>
       </p>      
     </div>
   </div>

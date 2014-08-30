@@ -547,7 +547,8 @@ img.transparent-black {
 }
 
 #refer .prizes .progress .mover .bar{
-    background: url(/assets/refer/progress-done.png) 0 0 repeat-x;
+    background-color: #212121;
+    background-repeat: repeat-x;
     width: 165px;
     height: 4px;
     -webkit-background-size: 1px 4px;
