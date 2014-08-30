@@ -726,7 +726,7 @@ img.transparent-black {
 /*
 	RETINA
 */
-@media only screen and (min--moz-device-pixel-ratio: 2),
+/*@media only screen and (min--moz-device-pixel-ratio: 2),
 only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
@@ -784,7 +784,7 @@ only screen and (min-device-pixel-ratio: 2) {
         background: url(/assets/refer/caret-selected@2x.png) center center no-repeat;
         background-size: 16px 10px;
     }
-}
+}*/
 
 
 
