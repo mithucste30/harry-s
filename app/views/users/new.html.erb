@@ -27,7 +27,7 @@
   <%= image_tag "home/key-icon.png", :class => "key" %>
 
   <%= form_for @user, :html => {:class => "form-inline"} do |f| %>
-    <%= f.email_field :email, {:class => "input-medium cfe"} %>
+    <%= f.email_field :email, {:class => "input-medium cfe", :placeholder => "Email Address"} %>
     <%= image_submit_tag "home/step-inside-black.png", :class => "new_user_sumit_image"  %>
   <% end %>
 </div>
