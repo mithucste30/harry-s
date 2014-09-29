@@ -1,6 +1,5 @@
 SSHKit.config.command_map[:rake] = "bundle exec rake"
 lock '3.2.1'
-require 'unicorn_service'
 
 set :application, 'prelaunchr'
 set :scm, :git
