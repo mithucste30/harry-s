@@ -662,11 +662,11 @@ img.transparent-black {
 
 #refer .prizes .products li.product .tooltip{
     height: 254px;
-    width: 190px;
+    width: auto;
     border: 4px solid #074E6F;
     position: absolute;
     top: -285px;
-    left: -32px;
+    left: -70px;
     display: none;
     background: #FFF;
 }
