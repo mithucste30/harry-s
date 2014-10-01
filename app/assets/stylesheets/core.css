@@ -656,8 +656,8 @@ img.transparent-black {
 
 #refer .prizes .products li.product:hover .circle{
     color: #FFF;
-    background: #074E6F;
-    border-color: #074E6F;
+    background: #222;
+    border-color: #222;
 }
 
 #refer .prizes .products li.product .tooltip{

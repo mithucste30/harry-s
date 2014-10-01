@@ -21,11 +21,11 @@
         <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Check+out+Ultra+Inspired!" target="_blank">
           <i class="fa fa-facebook white"></i>
         </a>
-        <% tweet_msg = 'Check out #UltraInspired!. You can come and join to win your own ultra inspired products too!' %>
+        <% tweet_msg = 'Check out #UltraInspired! You can come and join to win your own ultra inspired products too!' %>
         <a href='http://twitter.com/share?url=<%= tweet_url(:ref=> @user.referral_code)%>&text=<%= CGI::escape(tweet_msg) %>' target="_blank">
           <i class="fa fa-twitter white"></i>
         </a>
-        <a href="mailto:?subject=Check+out+Ultra+Inspired!&body=Ultra+Inspired+Living+is+a+new+community.+You+can+come+and+join+to+win+your+own+ultra+inspired+products+too!+<%= "#{root_url}?ref=#{@user.referral_code}" %>">
+        <a href="mailto:?subject=Check out Ultra Inspired!&body=Ultra Inspired Living is a new community. You can come and join to win your own ultra inspired products too! <%= "#{root_url}?ref=#{@user.referral_code}" %>">
           <i class="fa fa-envelope white"></i>
         </a>
       </p>      
