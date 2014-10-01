@@ -8,12 +8,12 @@
 
 <div class="refer hero">
   <div class="refer-heading-texts">
-    <p class="white stryde-thin uil">ULTRA INSPIRED LIIVING'S</p>
+    <p class="white stryde-thin uil">ULTRA INSPIRED LIVING</p>
     <p class="white stryde-thin thanks-signup">THANK YOU FOR SIGNING UP</p>
     <p class="white play-fair invite-friends">Invite Friends & Earn Product</p>
     <div class="get-free-good">
       <p class="white serif">Share your unique link via email, Facebook or Twitter and earn</p>
-      <p class="white serif">Ultra Inspired Livings goods for each friend who signs up.</p>
+      <p class="white serif">Ultra Inspired Living goods for each friend who signs up.</p>
     </div>
     <div class="copy-link serif"><%= root_url %>?ref=<%= @user.referral_code %></div>
     <div class="invite-via-social ">
@@ -21,11 +21,11 @@
         <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Check+out+Ultra+Inspired!" target="_blank">
           <i class="fa fa-facebook white"></i>
         </a>
-        <% tweet_msg = 'Check out #UltraInspired! You can come and join to win your own ultra inspired products too!' %>
+        <% tweet_msg = "Can't wait for @ultra_inspired to launch! I'm going to be #healthy + get goods for free." %>
         <a href='http://twitter.com/share?url=<%= tweet_url(:ref=> @user.referral_code)%>&text=<%= CGI::escape(tweet_msg) %>' target="_blank">
           <i class="fa fa-twitter white"></i>
         </a>
-        <a href="mailto:?subject=Check out Ultra Inspired!&body=Ultra Inspired Living is a new community. You can come and join to win your own ultra inspired products too! <%= "#{root_url}?ref=#{@user.referral_code}" %>">
+        <a href="mailto:?subject=Check out Ultra Inspired!&body=Super excited for the launch of Ultra Inspired Living. I'm getting some amazing products for free! You can too, come join me here <%= "#{root_url}?ref=#{@user.referral_code}" %>">
           <i class="fa fa-envelope white"></i>
         </a>
       </p>      
