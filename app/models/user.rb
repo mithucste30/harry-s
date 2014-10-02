@@ -31,7 +31,7 @@ class User < ActiveRecord::Base
         },
         {
             'count' => 50,
-            "html" => "5 eBooks + Set of 7 Gift Cards + 1 PSYCH-K session with Cara Phillips",
+            "html" => "5 eBooks + Set of 6 Gift Cards + 1 PSYCH-K session with Cara Phillips",
             "class" => "five",
             "image" => ActionController::Base.helpers.asset_path("refer/product_4.jpg")
         }
